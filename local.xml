@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Text language="en">
+  <en>
+    <text_start>Start</text_start>
+    <text_setting>Setting</text_setting>
+    <text_quit>Quit</text_quit>
+    <text_continue>Continue</text_continue>
+    <text_return>Return</text_return>
+    <text_setting_language>Language</text_setting_language>
+    <text_local_language>English</text_local_language>
+    <text_gameover>Game Over</text_gameover>
+    <text_prompt>Press 'Enter' to continue</text_prompt>
+    <text_level>Level</text_level>
+    
+  </en>
+  <cn>
+    <text_start>开始</text_start>
+    <text_setting>设置</text_setting>
+    <text_quit>退出</text_quit>
+    <text_continue>继续</text_continue>
+    <text_return>返回</text_return>
+    <text_setting_language>语言</text_setting_language>
+    <text_local_language>中文</text_local_language>
+    <text_gameover>游戏结束</text_gameover>
+    <text_prompt>按回车继续</text_prompt>
+    <text_level>关卡</text_level>
+  </cn>
+</Text>

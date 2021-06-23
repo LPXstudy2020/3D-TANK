@@ -1,0 +1,68 @@
+//Basic decleration
+
+
+Texture2D g_DiffuseMap;
+TextureCube g_TexCube;
+SamplerState g_Sam;
+
+
+ConstantBuffer CBChangesEveryInstanceDrawing : register(c0)
+{
+	matrix g_World;
+	matrix g_WorldInvTranspose;
+}
+
+ConstantBuffer CBChangesEveryObjectDrawing : register(c1)
+{
+	Material g_Material;
+}
+
+ConstantBuffer CBDrawingStates : register(c2)
+{
+	int g_TextureUsed;
+	int g_ReflectionEnabled;
+	float2 g_Pad;
+}
+
+ConstantBuffer CBChangesEveryFrame : register(c3)
+{
+	matrix g_View;
+	float3 g_EyePosW;
+	float g_Pad2;
+}
+
+ConstantBuffer CBChangesOnResize : register(c4)
+{
+	matrix g_Proj;
+}
+
+ConstantBuffer CBChangesRarely : register(c5)
+{
+	DirectionalLight g_DirLight[5];
+	PointLight g_PointLight[5];
+	SpotLight g_SpotLight[5];
+}
+
+struct VertexPosNormalTex
+{
+	float3 PosL : POSITION;
+	float3 NormalL : NORMAL;
+	float2 Tex : TEXCOORD;
+};
+
+struct VertexPosHWNormalTex
+{
+	float4 PosH : SV_POSITION;
+	float3 PosW : POSITION;
+	float3 NormalW : NORMAL;
+	float2 Tex : TEXCOORD;
+};
+
+struct InstancePosNormalTex
+{
+	float3 PosL : POSITION;
+	float3 NormalL : NORMAL;
+	float2 Tex : TEXCOORD;
+	matrix World : World;
+	matrix WorldInvTranspose : WorldInvTranspose;
+};
